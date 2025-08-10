@@ -1,0 +1,1348 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SkillHire - MERN Development Guide</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <div class="sidebar-header">
+                <h2 class="sidebar-title">SkillHire Guide</h2>
+                <p class="sidebar-subtitle">MERN Stack Project</p>
+            </div>
+            <div class="sidebar-nav">
+                <a href="#overview" class="nav-item active" data-section="overview">
+                    <span class="nav-icon">🚀</span>
+                    Project Overview
+                </a>
+                <a href="#techstack" class="nav-item" data-section="techstack">
+                    <span class="nav-icon">⚙️</span>
+                    Tech Stack
+                </a>
+                <a href="#structure" class="nav-item" data-section="structure">
+                    <span class="nav-icon">📁</span>
+                    Project Structure
+                </a>
+                <a href="#implementation" class="nav-item" data-section="implementation">
+                    <span class="nav-icon">🔨</span>
+                    Implementation Steps
+                </a>
+                <a href="#code" class="nav-item" data-section="code">
+                    <span class="nav-icon">💻</span>
+                    Code Examples
+                </a>
+                <a href="#deployment" class="nav-item" data-section="deployment">
+                    <span class="nav-icon">🚢</span>
+                    Deployment Guide
+                </a>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Project Overview Section -->
+            <section id="overview" class="content-section active">
+                <div class="section-header">
+                    <h1>SkillHire - AI-Powered Job Matching Platform</h1>
+                    <p class="section-description">Build a production-ready MERN stack application that showcases full-stack development skills and modern web architecture.</p>
+                </div>
+
+                <div class="overview-grid">
+                    <div class="overview-card">
+                        <h3>🎯 Why This Project Wins Interviews</h3>
+                        <ul>
+                            <li>Solves real HR problems with AI-powered matching</li>
+                            <li>Demonstrates full-stack MERN expertise</li>
+                            <li>Shows scalable architecture patterns</li>
+                            <li>Includes real-time features and background processing</li>
+                            <li>Production-ready deployment strategies</li>
+                        </ul>
+                    </div>
+
+                    <div class="overview-card">
+                        <h3>🚀 Core Features (MVP)</h3>
+                        <ul>
+                            <li><strong>Authentication:</strong> JWT + OAuth (Google/GitHub)</li>
+                            <li><strong>User Profiles:</strong> Candidate & Recruiter dashboards</li>
+                            <li><strong>Resume Upload:</strong> PDF parsing with NLP</li>
+                            <li><strong>Job Management:</strong> Post, search, and filter jobs</li>
+                            <li><strong>AI Matching:</strong> Score-based candidate-job matching</li>
+                            <li><strong>Real-time Chat:</strong> Socket.IO messaging system</li>
+                            <li><strong>Admin Dashboard:</strong> Analytics and user management</li>
+                        </ul>
+                    </div>
+
+                    <div class="overview-card">
+                        <h3>🏗️ System Architecture</h3>
+                        <div class="architecture-diagram">
+                            <div class="arch-layer">
+                                <div class="arch-component">React Frontend</div>
+                                <div class="arch-component">Redux + React Query</div>
+                            </div>
+                            <div class="arch-arrow">↕️</div>
+                            <div class="arch-layer">
+                                <div class="arch-component">Express API Server</div>
+                                <div class="arch-component">Socket.IO Real-time</div>
+                            </div>
+                            <div class="arch-arrow">↕️</div>
+                            <div class="arch-layer">
+                                <div class="arch-component">MongoDB Database</div>
+                                <div class="arch-component">Redis Cache/Queue</div>
+                                <div class="arch-component">AWS S3 Storage</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="overview-card">
+                        <h3>⚡ Advanced Features</h3>
+                        <ul>
+                            <li>Background job processing with BullMQ</li>
+                            <li>Resume parsing microservice</li>
+                            <li>Redis caching for performance</li>
+                            <li>Full-text search capabilities</li>
+                            <li>Docker containerization</li>
+                            <li>CI/CD with GitHub Actions</li>
+                            <li>PWA with offline support</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <button class="btn btn--primary btn--lg" onclick="navigateToSection('techstack')">
+                        Get Started with Tech Stack →
+                    </button>
+                </div>
+            </section>
+
+            <!-- Tech Stack Section -->
+            <section id="techstack" class="content-section">
+                <div class="section-header">
+                    <h1>Tech Stack Overview</h1>
+                    <p class="section-description">Comprehensive technology choices for building a scalable, production-ready application.</p>
+                </div>
+
+                <div class="tech-tabs">
+                    <div class="tab-nav">
+                        <button class="tab-button active" data-tab="frontend">Frontend</button>
+                        <button class="tab-button" data-tab="backend">Backend</button>
+                        <button class="tab-button" data-tab="infrastructure">Infrastructure</button>
+                        <button class="tab-button" data-tab="deployment">Deployment</button>
+                    </div>
+
+                    <div class="tab-content active" id="frontend-tab">
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <h4>⚛️ React (Vite)</h4>
+                                <p>Modern React development with Vite for fast builds and HMR</p>
+                                <div class="tech-features">
+                                    <span class="feature-tag">JSX Components</span>
+                                    <span class="feature-tag">Hooks</span>
+                                    <span class="feature-tag">Fast Refresh</span>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <h4>🔄 Redux Toolkit</h4>
+                                <p>Predictable state management with modern Redux patterns</p>
+                                <div class="tech-features">
+                                    <span class="feature-tag">RTK Query</span>
+                                    <span class="feature-tag">Immutable Updates</span>
+                                    <span class="feature-tag">DevTools</span>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <h4>🎨 Modern Styling</h4>
+                                <p>Component-based styling with modern CSS practices</p>
+                                <div class="tech-features">
+                                    <span class="feature-tag">CSS Variables</span>
+                                    <span class="feature-tag">Flexbox/Grid</span>
+                                    <span class="feature-tag">Responsive Design</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="backend-tab">
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <h4>🟢 Node.js + Express</h4>
+                                <p>High-performance JavaScript runtime with Express framework</p>
+                                <div class="tech-features">
+                                    <span class="feature-tag">RESTful APIs</span>
+                                    <span class="feature-tag">Middleware</span>
+                                    <span class="feature-tag">Error Handling</span>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <h4>🍃 MongoDB + Mongoose</h4>
+                                <p>NoSQL database with elegant object modeling</p>
+                                <div class="tech-features">
+                                    <span class="feature-tag">Schemas</span>
+                                    <span class="feature-tag">Validation</span>
+                                    <span class="feature-tag">Aggregation</span>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <h4>🔒 Authentication</h4>
+                                <p>Secure JWT-based authentication with OAuth integration</p>
+                                <div class="tech-features">
+                                    <span class="feature-tag">JWT Tokens</span>
+                                    <span class="feature-tag">OAuth 2.0</span>
+                                    <span class="feature-tag">Role-based Access</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="infrastructure-tab">
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <h4>🔴 Redis</h4>
+                                <p>In-memory data store for caching and job queues</p>
+                                <div class="tech-features">
+                                    <span class="feature-tag">Session Storage</span>
+                                    <span class="feature-tag">Caching</span>
+                                    <span class="feature-tag">Pub/Sub</span>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <h4>⚡ Socket.IO</h4>
+                                <p>Real-time bidirectional event-based communication</p>
+                                <div class="tech-features">
+                                    <span class="feature-tag">WebSocket</span>
+                                    <span class="feature-tag">Rooms</span>
+                                    <span class="feature-tag">Auto-reconnect</span>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <h4>☁️ AWS S3</h4>
+                                <p>Scalable object storage for resume files</p>
+                                <div class="tech-features">
+                                    <span class="feature-tag">File Upload</span>
+                                    <span class="feature-tag">CDN Integration</span>
+                                    <span class="feature-tag">Security</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="deployment-tab">
+                        <div class="tech-grid">
+                            <div class="tech-item">
+                                <h4>🐳 Docker</h4>
+                                <p>Containerization for consistent deployment environments</p>
+                                <div class="tech-features">
+                                    <span class="feature-tag">Multi-stage Builds</span>
+                                    <span class="feature-tag">Docker Compose</span>
+                                    <span class="feature-tag">Environment Isolation</span>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <h4>🚀 CI/CD</h4>
+                                <p>Automated testing and deployment with GitHub Actions</p>
+                                <div class="tech-features">
+                                    <span class="feature-tag">Automated Tests</span>
+                                    <span class="feature-tag">Build Pipeline</span>
+                                    <span class="feature-tag">Auto Deploy</span>
+                                </div>
+                            </div>
+                            <div class="tech-item">
+                                <h4>☁️ Cloud Hosting</h4>
+                                <p>Scalable hosting solutions for production deployment</p>
+                                <div class="tech-features">
+                                    <span class="feature-tag">AWS/GCP</span>
+                                    <span class="feature-tag">Load Balancing</span>
+                                    <span class="feature-tag">Monitoring</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Project Structure Section -->
+            <section id="structure" class="content-section">
+                <div class="section-header">
+                    <h1>Project Structure</h1>
+                    <p class="section-description">Organized folder structure following MERN best practices for maintainability and scalability.</p>
+                </div>
+
+                <div class="structure-container">
+                    <div class="structure-side">
+                        <h3>📁 Frontend Structure</h3>
+                        <div class="folder-tree">
+                            <div class="folder-item">📁 skillhire-client/</div>
+                            <div class="folder-item indent-1">📁 src/</div>
+                            <div class="folder-item indent-2">📁 components/</div>
+                            <div class="folder-item indent-3">📄 Header.jsx</div>
+                            <div class="folder-item indent-3">📄 JobCard.jsx</div>
+                            <div class="folder-item indent-3">📄 ProfileForm.jsx</div>
+                            <div class="folder-item indent-2">📁 pages/</div>
+                            <div class="folder-item indent-3">📄 Dashboard.jsx</div>
+                            <div class="folder-item indent-3">📄 Jobs.jsx</div>
+                            <div class="folder-item indent-3">📄 Profile.jsx</div>
+                            <div class="folder-item indent-2">📁 store/</div>
+                            <div class="folder-item indent-3">📄 authSlice.js</div>
+                            <div class="folder-item indent-3">📄 jobsSlice.js</div>
+                            <div class="folder-item indent-3">📄 store.js</div>
+                            <div class="folder-item indent-2">📁 hooks/</div>
+                            <div class="folder-item indent-3">📄 useAuth.js</div>
+                            <div class="folder-item indent-3">📄 useSocket.js</div>
+                            <div class="folder-item indent-2">📄 App.jsx</div>
+                            <div class="folder-item indent-2">📄 main.jsx</div>
+                            <div class="folder-item indent-1">📄 package.json</div>
+                            <div class="folder-item indent-1">📄 vite.config.js</div>
+                        </div>
+                    </div>
+
+                    <div class="structure-side">
+                        <h3>📁 Backend Structure</h3>
+                        <div class="folder-tree">
+                            <div class="folder-item">📁 skillhire-server/</div>
+                            <div class="folder-item indent-1">📁 src/</div>
+                            <div class="folder-item indent-2">📁 models/</div>
+                            <div class="folder-item indent-3">📄 User.js</div>
+                            <div class="folder-item indent-3">📄 Job.js</div>
+                            <div class="folder-item indent-3">📄 Application.js</div>
+                            <div class="folder-item indent-2">📁 routes/</div>
+                            <div class="folder-item indent-3">📄 auth.js</div>
+                            <div class="folder-item indent-3">📄 jobs.js</div>
+                            <div class="folder-item indent-3">📄 users.js</div>
+                            <div class="folder-item indent-2">📁 middleware/</div>
+                            <div class="folder-item indent-3">📄 auth.js</div>
+                            <div class="folder-item indent-3">📄 upload.js</div>
+                            <div class="folder-item indent-2">📁 services/</div>
+                            <div class="folder-item indent-3">📄 matchingEngine.js</div>
+                            <div class="folder-item indent-3">📄 resumeParser.js</div>
+                            <div class="folder-item indent-3">📄 emailService.js</div>
+                            <div class="folder-item indent-2">📁 utils/</div>
+                            <div class="folder-item indent-3">📄 database.js</div>
+                            <div class="folder-item indent-3">📄 redis.js</div>
+                            <div class="folder-item indent-2">📄 app.js</div>
+                            <div class="folder-item indent-2">📄 server.js</div>
+                            <div class="folder-item indent-1">📄 package.json</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="best-practices">
+                    <h3>🎯 Best Practices</h3>
+                    <div class="practices-grid">
+                        <div class="practice-card">
+                            <h4>Separation of Concerns</h4>
+                            <p>Models, routes, services, and utilities are clearly separated for maintainability.</p>
+                        </div>
+                        <div class="practice-card">
+                            <h4>Environment Configuration</h4>
+                            <p>Separate config files for development, testing, and production environments.</p>
+                        </div>
+                        <div class="practice-card">
+                            <h4>Modular Architecture</h4>
+                            <p>Each feature is contained within its own module for better scalability.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Implementation Steps Section -->
+            <section id="implementation" class="content-section">
+                <div class="section-header">
+                    <h1>Implementation Steps</h1>
+                    <p class="section-description">Step-by-step guide to building SkillHire from setup to deployment.</p>
+                </div>
+
+                <div class="implementation-timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-marker">1</div>
+                        <div class="timeline-content">
+                            <h3>Project Setup & Configuration</h3>
+                            <p>Initialize both client and server projects with proper tooling and dependencies.</p>
+                            <div class="step-details">
+                                <div class="detail-item">Create React app with Vite</div>
+                                <div class="detail-item">Setup Express server with TypeScript support</div>
+                                <div class="detail-item">Configure development environment</div>
+                                <div class="detail-item">Setup linting and formatting</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">2</div>
+                        <div class="timeline-content">
+                            <h3>Database Design & Models</h3>
+                            <p>Design MongoDB schemas and implement Mongoose models.</p>
+                            <div class="step-details">
+                                <div class="detail-item">User model with role-based fields</div>
+                                <div class="detail-item">Job posting schema with search optimization</div>
+                                <div class="detail-item">Application and matching models</div>
+                                <div class="detail-item">Database relationships and indexing</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">3</div>
+                        <div class="timeline-content">
+                            <h3>Authentication System</h3>
+                            <p>Implement secure JWT-based authentication with OAuth integration.</p>
+                            <div class="step-details">
+                                <div class="detail-item">JWT token generation and validation</div>
+                                <div class="detail-item">Google and GitHub OAuth setup</div>
+                                <div class="detail-item">Refresh token implementation</div>
+                                <div class="detail-item">Role-based access control</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">4</div>
+                        <div class="timeline-content">
+                            <h3>File Upload & Resume Parsing</h3>
+                            <p>Implement resume upload with AI-powered parsing capabilities.</p>
+                            <div class="step-details">
+                                <div class="detail-item">AWS S3 integration for file storage</div>
+                                <div class="detail-item">PDF parsing with NLP libraries</div>
+                                <div class="detail-item">Skill extraction and categorization</div>
+                                <div class="detail-item">Background processing with BullMQ</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">5</div>
+                        <div class="timeline-content">
+                            <h3>Job Management APIs</h3>
+                            <p>Create comprehensive job posting and search functionality.</p>
+                            <div class="step-details">
+                                <div class="detail-item">CRUD operations for job postings</div>
+                                <div class="detail-item">Advanced search and filtering</div>
+                                <div class="detail-item">Pagination and sorting</div>
+                                <div class="detail-item">Full-text search implementation</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">6</div>
+                        <div class="timeline-content">
+                            <h3>AI Matching Engine</h3>
+                            <p>Build the core AI-powered matching algorithm.</p>
+                            <div class="step-details">
+                                <div class="detail-item">Skill vector generation</div>
+                                <div class="detail-item">Matching score calculation</div>
+                                <div class="detail-item">Machine learning model integration</div>
+                                <div class="detail-item">Performance optimization</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">7</div>
+                        <div class="timeline-content">
+                            <h3>Real-time Chat Implementation</h3>
+                            <p>Add Socket.IO-based real-time messaging system.</p>
+                            <div class="step-details">
+                                <div class="detail-item">Socket.IO server setup</div>
+                                <div class="detail-item">Chat rooms and private messaging</div>
+                                <div class="detail-item">Message persistence</div>
+                                <div class="detail-item">Real-time notifications</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">8</div>
+                        <div class="timeline-content">
+                            <h3>Frontend Development</h3>
+                            <p>Build responsive React UI with modern state management.</p>
+                            <div class="step-details">
+                                <div class="detail-item">Component-based architecture</div>
+                                <div class="detail-item">Redux Toolkit integration</div>
+                                <div class="detail-item">Responsive design implementation</div>
+                                <div class="detail-item">Progressive Web App features</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">9</div>
+                        <div class="timeline-content">
+                            <h3>Testing & Quality Assurance</h3>
+                            <p>Implement comprehensive testing strategy.</p>
+                            <div class="step-details">
+                                <div class="detail-item">Unit tests for critical functions</div>
+                                <div class="detail-item">Integration tests for APIs</div>
+                                <div class="detail-item">End-to-end testing with Cypress</div>
+                                <div class="detail-item">Performance testing and optimization</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="timeline-item">
+                        <div class="timeline-marker">10</div>
+                        <div class="timeline-content">
+                            <h3>Deployment & Production</h3>
+                            <p>Deploy to production with monitoring and CI/CD.</p>
+                            <div class="step-details">
+                                <div class="detail-item">Docker containerization</div>
+                                <div class="detail-item">GitHub Actions CI/CD setup</div>
+                                <div class="detail-item">Cloud deployment (AWS/GCP)</div>
+                                <div class="detail-item">Monitoring and logging setup</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Code Examples Section -->
+            <section id="code" class="content-section">
+                <div class="section-header">
+                    <h1>Code Examples</h1>
+                    <p class="section-description">Essential code snippets and configurations for key features.</p>
+                </div>
+
+                <div class="code-tabs">
+                    <div class="tab-nav">
+                        <button class="tab-button active" data-tab="models">Database Models</button>
+                        <button class="tab-button" data-tab="api">API Routes</button>
+                        <button class="tab-button" data-tab="components">React Components</button>
+                        <button class="tab-button" data-tab="config">Configuration</button>
+                    </div>
+
+                    <div class="tab-content active" id="models-tab">
+                        <div class="code-example">
+                            <h4>User Model (MongoDB/Mongoose)</h4>
+                            <pre><code class="javascript">const mongoose = require('mongoose');
+const bcrypt = require('bcryptjs');
+
+const userSchema = new mongoose.Schema({
+  name: {
+    type: String,
+    required: true,
+    trim: true
+  },
+  email: {
+    type: String,
+    required: true,
+    unique: true,
+    lowercase: true
+  },
+  password: {
+    type: String,
+    required: function() { return !this.googleId && !this.githubId; }
+  },
+  role: {
+    type: String,
+    enum: ['candidate', 'recruiter', 'admin'],
+    default: 'candidate'
+  },
+  profile: {
+    skills: [String],
+    experience: Number,
+    education: String,
+    resume: String,
+    portfolio: String,
+    github: String
+  },
+  googleId: String,
+  githubId: String,
+  isActive: {
+    type: Boolean,
+    default: true
+  }
+}, {
+  timestamps: true
+});
+
+userSchema.pre('save', async function(next) {
+  if (!this.isModified('password')) return next();
+  this.password = await bcrypt.hash(this.password, 12);
+  next();
+});
+
+userSchema.methods.comparePassword = async function(candidatePassword) {
+  return bcrypt.compare(candidatePassword, this.password);
+};
+
+module.exports = mongoose.model('User', userSchema);</code></pre>
+                        </div>
+
+                        <div class="code-example">
+                            <h4>Job Model</h4>
+                            <pre><code class="javascript">const jobSchema = new mongoose.Schema({
+  title: {
+    type: String,
+    required: true,
+    text: true // Enable text search
+  },
+  description: {
+    type: String,
+    required: true,
+    text: true
+  },
+  company: {
+    type: String,
+    required: true
+  },
+  location: {
+    type: String,
+    required: true
+  },
+  salary: {
+    min: Number,
+    max: Number,
+    currency: {
+      type: String,
+      default: 'USD'
+    }
+  },
+  requiredSkills: [String],
+  experienceLevel: {
+    type: String,
+    enum: ['entry', 'mid', 'senior', 'lead'],
+    required: true
+  },
+  jobType: {
+    type: String,
+    enum: ['full-time', 'part-time', 'contract', 'internship'],
+    default: 'full-time'
+  },
+  isRemote: {
+    type: Boolean,
+    default: false
+  },
+  postedBy: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'User',
+    required: true
+  },
+  applications: [{
+    candidate: {
+      type: mongoose.Schema.Types.ObjectId,
+      ref: 'User'
+    },
+    appliedAt: {
+      type: Date,
+      default: Date.now
+    },
+    status: {
+      type: String,
+      enum: ['pending', 'reviewed', 'shortlisted', 'rejected'],
+      default: 'pending'
+    },
+    matchScore: Number
+  }],
+  isActive: {
+    type: Boolean,
+    default: true
+  }
+}, {
+  timestamps: true
+});
+
+// Create text index for search
+jobSchema.index({
+  title: 'text',
+  description: 'text',
+  company: 'text'
+});
+
+module.exports = mongoose.model('Job', jobSchema);</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="api-tab">
+                        <div class="code-example">
+                            <h4>Authentication Routes</h4>
+                            <pre><code class="javascript">const express = require('express');
+const jwt = require('jsonwebtoken');
+const passport = require('passport');
+const User = require('../models/User');
+const { authenticateToken } = require('../middleware/auth');
+
+const router = express.Router();
+
+// Register endpoint
+router.post('/register', async (req, res) => {
+  try {
+    const { name, email, password, role } = req.body;
+    
+    const existingUser = await User.findOne({ email });
+    if (existingUser) {
+      return res.status(400).json({ message: 'User already exists' });
+    }
+
+    const user = new User({ name, email, password, role });
+    await user.save();
+
+    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
+      expiresIn: '7d'
+    });
+
+    res.status(201).json({
+      token,
+      user: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+        role: user.role
+      }
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// Login endpoint
+router.post('/login', async (req, res) => {
+  try {
+    const { email, password } = req.body;
+    
+    const user = await User.findOne({ email });
+    if (!user || !(await user.comparePassword(password))) {
+      return res.status(401).json({ message: 'Invalid credentials' });
+    }
+
+    const token = jwt.sign({ userId: user._id }, process.env.JWT_SECRET, {
+      expiresIn: '7d'
+    });
+
+    res.json({
+      token,
+      user: {
+        id: user._id,
+        name: user.name,
+        email: user.email,
+        role: user.role
+      }
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// Google OAuth
+router.get('/google',
+  passport.authenticate('google', { scope: ['profile', 'email'] })
+);
+
+router.get('/google/callback',
+  passport.authenticate('google', { session: false }),
+  (req, res) => {
+    const token = jwt.sign({ userId: req.user._id }, process.env.JWT_SECRET);
+    res.redirect(`${process.env.CLIENT_URL}/auth/success?token=${token}`);
+  }
+);
+
+module.exports = router;</code></pre>
+                        </div>
+
+                        <div class="code-example">
+                            <h4>Job Management Routes</h4>
+                            <pre><code class="javascript">const express = require('express');
+const Job = require('../models/Job');
+const { authenticateToken, authorizeRoles } = require('../middleware/auth');
+const matchingService = require('../services/matchingEngine');
+
+const router = express.Router();
+
+// Get all jobs with search and filters
+router.get('/', async (req, res) => {
+  try {
+    const { 
+      search, 
+      location, 
+      experienceLevel, 
+      jobType, 
+      skills,
+      page = 1, 
+      limit = 10 
+    } = req.query;
+
+    let query = { isActive: true };
+    
+    // Text search
+    if (search) {
+      query.$text = { $search: search };
+    }
+    
+    // Filters
+    if (location) query.location = new RegExp(location, 'i');
+    if (experienceLevel) query.experienceLevel = experienceLevel;
+    if (jobType) query.jobType = jobType;
+    if (skills) query.requiredSkills = { $in: skills.split(',') };
+
+    const jobs = await Job.find(query)
+      .populate('postedBy', 'name company')
+      .sort({ createdAt: -1 })
+      .limit(limit * 1)
+      .skip((page - 1) * limit)
+      .exec();
+
+    const total = await Job.countDocuments(query);
+
+    res.json({
+      jobs,
+      totalPages: Math.ceil(total / limit),
+      currentPage: page,
+      total
+    });
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+// Create new job
+router.post('/', 
+  authenticateToken, 
+  authorizeRoles('recruiter', 'admin'),
+  async (req, res) => {
+    try {
+      const job = new Job({
+        ...req.body,
+        postedBy: req.user.userId
+      });
+
+      await job.save();
+      await job.populate('postedBy', 'name company');
+
+      res.status(201).json(job);
+    } catch (error) {
+      res.status(500).json({ message: error.message });
+    }
+  }
+);
+
+// Get job recommendations for candidate
+router.get('/recommendations', authenticateToken, async (req, res) => {
+  try {
+    const recommendations = await matchingService.getJobRecommendations(
+      req.user.userId
+    );
+    res.json(recommendations);
+  } catch (error) {
+    res.status(500).json({ message: error.message });
+  }
+});
+
+module.exports = router;</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="components-tab">
+                        <div class="code-example">
+                            <h4>Job Card Component</h4>
+                            <pre><code class="javascript">import React from 'react';
+import { useSelector } from 'react-redux';
+import { MapPinIcon, ClockIcon, CurrencyDollarIcon } from '@heroicons/react/24/outline';
+
+const JobCard = ({ job, onApply, showMatchScore = false }) => {
+  const { user } = useSelector((state) => state.auth);
+  
+  const formatSalary = (min, max, currency = 'USD') => {
+    const formatter = new Intl.NumberFormat('en-US', {
+      style: 'currency',
+      currency,
+      minimumFractionDigits: 0,
+    });
+    
+    if (min && max) {
+      return `${formatter.format(min)} - ${formatter.format(max)}`;
+    }
+    return min ? `${formatter.format(min)}+` : 'Competitive';
+  };
+
+  const getExperienceBadgeColor = (level) => {
+    const colors = {
+      entry: 'bg-green-100 text-green-800',
+      mid: 'bg-blue-100 text-blue-800',
+      senior: 'bg-purple-100 text-purple-800',
+      lead: 'bg-red-100 text-red-800'
+    };
+    return colors[level] || 'bg-gray-100 text-gray-800';
+  };
+
+  return (
+    <div className="bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-200 border border-gray-200">
+      <div className="p-6">
+        <div className="flex justify-between items-start mb-4">
+          <div>
+            <h3 className="text-xl font-semibold text-gray-900 mb-1">
+              {job.title}
+            </h3>
+            <p className="text-gray-600 font-medium">{job.company}</p>
+          </div>
+          {showMatchScore && job.matchScore && (
+            <div className="bg-blue-50 px-3 py-1 rounded-full">
+              <span className="text-blue-700 text-sm font-medium">
+                {job.matchScore}% match
+              </span>
+            </div>
+          )}
+        </div>
+
+        <div className="flex flex-wrap gap-2 mb-4">
+          <div className="flex items-center text-gray-500 text-sm">
+            <MapPinIcon className="h-4 w-4 mr-1" />
+            {job.location}
+            {job.isRemote && (
+              <span className="ml-2 bg-green-100 text-green-800 px-2 py-1 rounded-full text-xs">
+                Remote
+              </span>
+            )}
+          </div>
+          
+          <div className="flex items-center text-gray-500 text-sm">
+            <ClockIcon className="h-4 w-4 mr-1" />
+            {job.jobType}
+          </div>
+          
+          {job.salary && (
+            <div className="flex items-center text-gray-500 text-sm">
+              <CurrencyDollarIcon className="h-4 w-4 mr-1" />
+              {formatSalary(job.salary.min, job.salary.max, job.salary.currency)}
+            </div>
+          )}
+        </div>
+
+        <div className="mb-4">
+          <span className={`inline-block px-3 py-1 rounded-full text-sm font-medium ${getExperienceBadgeColor(job.experienceLevel)}`}>
+            {job.experienceLevel} level
+          </span>
+        </div>
+
+        <p className="text-gray-600 mb-4 line-clamp-3">
+          {job.description}
+        </p>
+
+        <div className="mb-4">
+          <p className="text-sm font-medium text-gray-700 mb-2">Required Skills:</p>
+          <div className="flex flex-wrap gap-2">
+            {job.requiredSkills.slice(0, 5).map((skill) => (
+              <span
+                key={skill}
+                className="bg-gray-100 text-gray-700 px-2 py-1 rounded text-sm"
+              >
+                {skill}
+              </span>
+            ))}
+            {job.requiredSkills.length > 5 && (
+              <span className="text-gray-500 text-sm">
+                +{job.requiredSkills.length - 5} more
+              </span>
+            )}
+          </div>
+        </div>
+
+        <div className="flex justify-between items-center">
+          <span className="text-gray-500 text-sm">
+            Posted {new Date(job.createdAt).toLocaleDateString()}
+          </span>
+          
+          {user?.role === 'candidate' && (
+            <button
+              onClick={() => onApply(job._id)}
+              className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition-colors duration-200 font-medium"
+            >
+              Apply Now
+            </button>
+          )}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default JobCard;</code></pre>
+                        </div>
+
+                        <div class="code-example">
+                            <h4>Authentication Hook</h4>
+                            <pre><code class="javascript">import { useSelector, useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { logout, setUser } from '../store/authSlice';
+import api from '../services/api';
+
+export const useAuth = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+  const { user, token, isLoading } = useSelector((state) => state.auth);
+
+  const login = async (credentials) => {
+    try {
+      const response = await api.post('/auth/login', credentials);
+      const { token, user } = response.data;
+      
+      localStorage.setItem('token', token);
+      dispatch(setUser({ user, token }));
+      
+      return { success: true };
+    } catch (error) {
+      return { 
+        success: false, 
+        error: error.response?.data?.message || 'Login failed' 
+      };
+    }
+  };
+
+  const register = async (userData) => {
+    try {
+      const response = await api.post('/auth/register', userData);
+      const { token, user } = response.data;
+      
+      localStorage.setItem('token', token);
+      dispatch(setUser({ user, token }));
+      
+      return { success: true };
+    } catch (error) {
+      return { 
+        success: false, 
+        error: error.response?.data?.message || 'Registration failed' 
+      };
+    }
+  };
+
+  const logoutUser = () => {
+    localStorage.removeItem('token');
+    dispatch(logout());
+    navigate('/login');
+  };
+
+  const updateProfile = async (profileData) => {
+    try {
+      const response = await api.put('/users/profile', profileData);
+      dispatch(setUser({ user: response.data, token }));
+      return { success: true };
+    } catch (error) {
+      return { 
+        success: false, 
+        error: error.response?.data?.message || 'Profile update failed' 
+      };
+    }
+  };
+
+  return {
+    user,
+    token,
+    isLoading,
+    isAuthenticated: !!token,
+    login,
+    register,
+    logout: logoutUser,
+    updateProfile
+  };
+};</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="tab-content" id="config-tab">
+                        <div class="code-example">
+                            <h4>Environment Configuration</h4>
+                            <pre><code class="bash"># .env (Server)
+NODE_ENV=development
+PORT=5000
+
+# Database
+MONGODB_URI=mongodb://localhost:27017/skillhire
+REDIS_URL=redis://localhost:6379
+
+# JWT
+JWT_SECRET=your_super_secret_jwt_key
+JWT_EXPIRES_IN=7d
+
+# OAuth
+GOOGLE_CLIENT_ID=your_google_client_id
+GOOGLE_CLIENT_SECRET=your_google_client_secret
+GITHUB_CLIENT_ID=your_github_client_id
+GITHUB_CLIENT_SECRET=your_github_client_secret
+
+# AWS S3
+AWS_ACCESS_KEY_ID=your_aws_access_key
+AWS_SECRET_ACCESS_KEY=your_aws_secret_key
+AWS_S3_BUCKET=skillhire-resumes
+AWS_REGION=us-east-1
+
+# Email
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your_email@gmail.com
+SMTP_PASS=your_app_password
+
+# Client URL
+CLIENT_URL=http://localhost:3000</code></pre>
+                        </div>
+
+                        <div class="code-example">
+                            <h4>Docker Configuration</h4>
+                            <pre><code class="dockerfile"># Dockerfile (Server)
+FROM node:18-alpine AS base
+
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+
+FROM base AS development
+RUN npm ci
+COPY . .
+EXPOSE 5000
+CMD ["npm", "run", "dev"]
+
+FROM base AS production
+COPY . .
+RUN npm run build
+EXPOSE 5000
+CMD ["npm", "start"]</code></pre>
+                        </div>
+
+                        <div class="code-example">
+                            <h4>Docker Compose</h4>
+                            <pre><code class="yaml">version: '3.8'
+
+services:
+  client:
+    build:
+      context: ./client
+      dockerfile: Dockerfile
+    ports:
+      - "3000:3000"
+    environment:
+      - REACT_APP_API_URL=http://localhost:5000/api
+      - REACT_APP_SOCKET_URL=http://localhost:5000
+    depends_on:
+      - server
+
+  server:
+    build:
+      context: ./server
+      dockerfile: Dockerfile
+    ports:
+      - "5000:5000"
+    environment:
+      - NODE_ENV=development
+      - MONGODB_URI=mongodb://mongo:27017/skillhire
+      - REDIS_URL=redis://redis:6379
+    depends_on:
+      - mongo
+      - redis
+    volumes:
+      - ./server:/app
+      - /app/node_modules
+
+  mongo:
+    image: mongo:6
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+
+  redis:
+    image: redis:7-alpine
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+
+volumes:
+  mongo_data:
+  redis_data:</code></pre>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Deployment Guide Section -->
+            <section id="deployment" class="content-section">
+                <div class="section-header">
+                    <h1>Deployment Guide</h1>
+                    <p class="section-description">Production-ready deployment with Docker, CI/CD, and cloud hosting.</p>
+                </div>
+
+                <div class="deployment-steps">
+                    <div class="deployment-card">
+                        <h3>🐳 Docker Containerization</h3>
+                        <p>Containerize your application for consistent deployment across environments.</p>
+                        <div class="deployment-features">
+                            <div class="feature">Multi-stage Docker builds for optimization</div>
+                            <div class="feature">Docker Compose for local development</div>
+                            <div class="feature">Environment-specific configurations</div>
+                            <div class="feature">Health checks and graceful shutdowns</div>
+                        </div>
+                        <div class="deployment-code">
+                            <h5>Production Dockerfile Example:</h5>
+                            <pre><code># Multi-stage build for production
+FROM node:18-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm ci --only=production
+
+FROM node:18-alpine AS production
+WORKDIR /app
+COPY --from=builder /app/node_modules ./node_modules
+COPY . .
+EXPOSE 5000
+USER node
+CMD ["npm", "start"]</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="deployment-card">
+                        <h3>🚀 CI/CD Pipeline</h3>
+                        <p>Automated testing, building, and deployment with GitHub Actions.</p>
+                        <div class="deployment-features">
+                            <div class="feature">Automated testing on pull requests</div>
+                            <div class="feature">Docker image building and pushing</div>
+                            <div class="feature">Deployment to staging and production</div>
+                            <div class="feature">Rollback capabilities</div>
+                        </div>
+                        <div class="deployment-code">
+                            <h5>GitHub Actions Workflow:</h5>
+                            <pre><code>name: CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, develop]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+      - name: Install dependencies
+        run: npm ci
+      - name: Run tests
+        run: npm test
+      
+  build-and-deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    steps:
+      - uses: actions/checkout@v3
+      - name: Build Docker image
+        run: docker build -t skillhire:latest .
+      - name: Deploy to production
+        run: ./scripts/deploy.sh</code></pre>
+                        </div>
+                    </div>
+
+                    <div class="deployment-card">
+                        <h3>☁️ Cloud Hosting</h3>
+                        <p>Deploy to scalable cloud platforms with managed services.</p>
+                        <div class="deployment-features">
+                            <div class="feature">AWS ECS/EKS or Google Cloud Run</div>
+                            <div class="feature">Managed MongoDB Atlas</div>
+                            <div class="feature">Redis Cloud for caching</div>
+                            <div class="feature">CDN for static assets</div>
+                        </div>
+                        <div class="platform-options">
+                            <div class="platform-option">
+                                <h5>AWS Deployment</h5>
+                                <ul>
+                                    <li>ECS Fargate for containers</li>
+                                    <li>Application Load Balancer</li>
+                                    <li>S3 for file storage</li>
+                                    <li>CloudFront CDN</li>
+                                    <li>Route 53 for DNS</li>
+                                </ul>
+                            </div>
+                            <div class="platform-option">
+                                <h5>Google Cloud Platform</h5>
+                                <ul>
+                                    <li>Cloud Run for containers</li>
+                                    <li>Cloud Load Balancing</li>
+                                    <li>Cloud Storage</li>
+                                    <li>Cloud CDN</li>
+                                    <li>Cloud DNS</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="deployment-card">
+                        <h3>📊 Monitoring & Logging</h3>
+                        <p>Production monitoring with logging, metrics, and alerting.</p>
+                        <div class="deployment-features">
+                            <div class="feature">Application performance monitoring</div>
+                            <div class="feature">Structured logging with Winston</div>
+                            <div class="feature">Error tracking and reporting</div>
+                            <div class="feature">Health checks and uptime monitoring</div>
+                        </div>
+                        <div class="monitoring-tools">
+                            <div class="tool-section">
+                                <h5>Logging Setup:</h5>
+                                <pre><code>const winston = require('winston');
+
+const logger = winston.createLogger({
+  level: 'info',
+  format: winston.format.combine(
+    winston.format.timestamp(),
+    winston.format.json()
+  ),
+  transports: [
+    new winston.transports.File({ filename: 'error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'combined.log' }),
+    new winston.transports.Console({
+      format: winston.format.simple()
+    })
+  ]
+});
+
+module.exports = logger;</code></pre>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="deployment-checklist">
+                    <h3>📋 Production Deployment Checklist</h3>
+                    <div class="checklist-grid">
+                        <div class="checklist-section">
+                            <h4>Security</h4>
+                            <div class="checklist-item">✓ Environment variables secured</div>
+                            <div class="checklist-item">✓ HTTPS/SSL certificates configured</div>
+                            <div class="checklist-item">✓ Rate limiting implemented</div>
+                            <div class="checklist-item">✓ Input validation and sanitization</div>
+                            <div class="checklist-item">✓ CORS properly configured</div>
+                        </div>
+                        <div class="checklist-section">
+                            <h4>Performance</h4>
+                            <div class="checklist-item">✓ Database indexes optimized</div>
+                            <div class="checklist-item">✓ Caching strategy implemented</div>
+                            <div class="checklist-item">✓ Images and assets optimized</div>
+                            <div class="checklist-item">✓ Compression enabled</div>
+                            <div class="checklist-item">✓ CDN configured</div>
+                        </div>
+                        <div class="checklist-section">
+                            <h4>Reliability</h4>
+                            <div class="checklist-item">✓ Health checks configured</div>
+                            <div class="checklist-item">✓ Database backups automated</div>
+                            <div class="checklist-item">✓ Error handling comprehensive</div>
+                            <div class="checklist-item">✓ Monitoring and alerting setup</div>
+                            <div class="checklist-item">✓ Rollback procedure documented</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cta-section">
+                    <h3>🎉 Ready to Deploy?</h3>
+                    <p>Your SkillHire application is now ready for production deployment. Follow the steps above to launch your interview-winning MERN stack project!</p>
+                    <button class="btn btn--primary btn--lg" onclick="navigateToSection('overview')">
+                        ← Back to Overview
+                    </button>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>

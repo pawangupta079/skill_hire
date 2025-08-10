@@ -1,0 +1,75 @@
+# =========================
+# Node.js (Server + Client)
+# =========================
+
+# Dependency folders
+node_modules/
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Build output
+dist/
+build/
+
+# Coverage reports
+coverage/
+
+# =========================
+# React (Client-specific)
+# =========================
+skillhire-client/node_modules/
+skillhire-client/build/
+
+# =========================
+# Server-specific
+# =========================
+skillhire-server/node_modules/
+skillhire-server/dist/
+skillhire-server/uploads/
+
+# =========================
+# OS-specific
+# =========================
+.DS_Store
+Thumbs.db
+
+# Temporary files
+*.tmp
+*.swp
+
+# IDE-specific
+.vscode/
+.idea/
+
+# Miscellaneous
+*.bak
+*.orig
+*.swo
+
+# Compiled Java source
+*.class
+
+# Python cache
+__pycache__/
+.ipynb_checkpoints/
+
+# Yarn Integrity file
+.yarn-integrity
+
+# Lock files (optional — remove if you want to keep them in Git)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml

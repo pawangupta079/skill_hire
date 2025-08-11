@@ -1,0 +1,17 @@
+{
+  "name": "skillhire",
+  "private": true,
+  "scripts": {
+  "start": "node skillhire-server/app.js",
+  "server": "nodemon skillhire-server/app.js",
+  "client": "npm run dev --prefix skillhire-client",
+  "dev": "concurrently \"npm run server\" \"npm run client\""
+}
+,
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}
+
+
+

@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 app.use(cors());
 app.use(express.json());
-
+    
 // Test route
 app.get('/', (req, res) => {
   res.send('SkillHire API is running... (this message in written in the server side folders )');

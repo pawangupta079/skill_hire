@@ -50,7 +50,7 @@ Thumbs.db
 # Temporary files
 *.tmp
 *.swp
-
+.env
 # IDE-specific
 .vscode/
 .idea/
@@ -62,7 +62,7 @@ Thumbs.db
 
 # Compiled Java source
 *.class
-
+.env
 # Python cache
 __pycache__/
 .ipynb_checkpoints/
